@@ -21,8 +21,20 @@ autodoc:
 	find -f *.rst ! -name index.rst ! -name req2toml.rst -delete
 	@$(SPINXAUTODOC) -f -o source ../req2toml ../tests/*
 
+.PHONY: migrate
+# migrate
+migrate:
+	@mv build/html ./html
+	@mv build/doctrees ./doctrees
+
+.PHONY: clean-migrate
+# migrate
+clean-migrate:
+	-@rm -r ./html
+	-@rm -r ./doctrees
+
 .PHONY: doc
-doc: clean html
+doc: clean html clean-migrate migrate
 
 .PHONY: help Makefile
 # Catch-all target: route all unknown targets to Sphinx using the new

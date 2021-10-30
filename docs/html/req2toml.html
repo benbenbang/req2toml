@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>req2toml package &mdash; req2toml 1.2.0 documentation</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+
+
+
+
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="req2toml 1.2.0 documentation" href="index.html"/>
+
+
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+
+
+            <a href="index.html" class="icon icon-home"> req2toml
+
+
+
+          </a>
+
+
+
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <!-- Local TOC -->
+                <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">req2toml package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-req2toml.console">req2toml.console module</a><ul>
+<li><a class="reference internal" href="#cli">cli</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-req2toml.utils">req2toml.utils module</a></li>
+<li><a class="reference internal" href="#module-req2toml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">req2toml</a>
+
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="index.html">Docs</a> &raquo;</li>
+
+      <li>req2toml package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="_sources/req2toml.rst.txt" rel="nofollow"> View page source</a>
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <div class="section" id="req2toml-package">
+<h1>req2toml package<a class="headerlink" href="#req2toml-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-req2toml.console">
+<span id="req2toml-console-module"></span><h2>req2toml.console module<a class="headerlink" href="#module-req2toml.console" title="Permalink to this headline">¶</a></h2>
+<p>Copyright 2020</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<div class="section" id="cli">
+<h3>cli<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h3>
+<p>CLI Endpoint: To convert requirements file to pyproject.toml &amp; poetry lock</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filepath (str): Path to the requirments file
+install (bool): A Flag. By default, the cli only update the lock without install the deps. Add <cite>–install</cite> flag to install the deps simultaneously.
+verbose (bool): A Flag. Add <cite>-v</cite> to print out debug logs</p>
+</dd>
+</dl>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cli <span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-cli-f">
+<code class="sig-name descname"><span class="pre">-f</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;filepath&gt;</span></code><a class="headerlink" href="#cmdoption-cli-f" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Required</strong> Path to requirements.txt</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-cli-install">
+<code class="sig-name descname"><span class="pre">--install</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-cli-install" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, it will only update the lock, add this flag to install the dependencies at the same time.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-cli-dev">
+<code class="sig-name descname"><span class="pre">--dev</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-cli-dev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add to the dev section in the project toml file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-cli-v">
+<code class="sig-name descname"><span class="pre">-v</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-cli-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable verbose mode to print out the logs</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-req2toml.utils">
+<span id="req2toml-utils-module"></span><h2>req2toml.utils module<a class="headerlink" href="#module-req2toml.utils" title="Permalink to this headline">¶</a></h2>
+<p>Copyright 2020</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<dl class="py function">
+<dt id="req2toml.utils.inpty">
+<code class="sig-prename descclassname"><span class="pre">req2toml.utils.</span></code><code class="sig-name descname"><span class="pre">inpty</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">click.core.Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ByteString</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/req2toml/utils.html#inpty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#req2toml.utils.inpty" title="Permalink to this definition">¶</a></dt>
+<dd><p>inpty polls colorful stdout of poetry to the terminal</p>
+<blockquote>
+<div><p>This function executes command and use select + pty to pull process stdout and stderr to file-object ‘log’ in non-blocking way, so it can simultaneously logging to stdout and close by itself after the process is done.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Args:</dt><dd><p>ctx (click.Context): a click Context object which is used to control the flow
+cmd (str, List): command that will be passed to a subprocess
+env (Dict): copy current env settings to pty pseudo one to ensure process
+log (ByteString): A disposable container to collect stdout which is polled from the subprocess</p>
+</dd>
+<dt>Returns:</dt><dd><p>returncode (int): Result status of the process</p>
+</dd>
+<dt>Raise:</dt><dd><p>click.Abort: Abort by click if encounter error(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="req2toml.utils.read_requirments">
+<code class="sig-prename descclassname"><span class="pre">req2toml.utils.</span></code><code class="sig-name descname"><span class="pre">read_requirments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">click.core.Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">req_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">os.PathLike</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="reference internal" href="_modules/req2toml/utils.html#read_requirments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#req2toml.utils.read_requirments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read Requirments.txt from the given path after passed several checkes</p>
+<dl class="simple">
+<dt>Note</dt><dd><ol class="arabic simple">
+<li><p>Starting <cite>if</cite> is to check that the requirements.txt (or in your way of naming) exists at the given path</p></li>
+<li><p>Check pyproject.toml is at the current dir or in the root dir of a root dir of a GIT project</p></li>
+<li><p>Check the reqs file is a support type</p></li>
+<li><p>Read and clean the dependencies that are listed in the file</p></li>
+</ol>
+</dd>
+<dt>Args:</dt><dd><p>ctx (click.Context): a click Context object which is used to control the flow
+req_path (str, PathLike): path in str or PathLike (pathlib) type object of a file</p>
+</dd>
+<dt>Returns:</dt><dd><p>deps (str): Dependencies in list</p>
+</dd>
+<dt>Raises:</dt><dd><p>ctx.Abort: Abort by click if encounter error(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="req2toml.utils.toml_at_root">
+<code class="sig-prename descclassname"><span class="pre">req2toml.utils.</span></code><code class="sig-name descname"><span class="pre">toml_at_root</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="reference internal" href="_modules/req2toml/utils.html#toml_at_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#req2toml.utils.toml_at_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the root dir of a Git project and try to locate the pyproject.toml</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True if pyproject.toml exists</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-req2toml">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-req2toml" title="Permalink to this headline">¶</a></h2>
+<p>Copyright 2020 Ben CHEN</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ben CHEN.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Sphinx-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+
+
+
+
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+
+
+</body>
+</html>
