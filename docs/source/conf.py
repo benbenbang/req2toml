@@ -42,9 +42,10 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
+    "sphinx_click",
 ]
 
-napoleon_google_docstring = True
+napoleon_google_docstring = False
 napoleon_numpy_docstring = True
 napoleon_include_init_with_doc = True
 napoleon_include_private_with_doc = True
@@ -63,7 +64,6 @@ exclude_patterns = [
     "setup.py",
     "docs",
     "tests",
-    "dags",
 ]
 
 source_suffix = ".rst"

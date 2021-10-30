@@ -18,11 +18,11 @@ help:
 autodoc:
 	@-mkdir source/_static
 	@-cd source; \
-	find -f *.rst ! -name index.rst -delete
+	find -f *.rst ! -name index.rst ! -name req2toml.rst -delete
 	@$(SPINXAUTODOC) -f -o source ../req2toml ../tests/*
 
 .PHONY: doc
-doc: clean autodoc html
+doc: clean html
 
 .PHONY: help Makefile
 # Catch-all target: route all unknown targets to Sphinx using the new
